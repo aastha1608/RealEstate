@@ -4,9 +4,11 @@ import '../Cssfiles/DetailsForm.css';
 
 const AdditionalDetails = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    fname: '',
+    lname: '',
     phone: '',
     email: '',
+    pan:'',
     address: '',
   });
 
@@ -28,9 +30,17 @@ const AdditionalDetails = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
+            name="fname"
+            placeholder="First Name"
+            value={formData.fname}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="lname"
+            placeholder="Last Name"
+            value={formData.lname}
             onChange={handleChange}
             required
           />
@@ -47,6 +57,14 @@ const AdditionalDetails = () => {
             name="email"
             placeholder="Email"
             value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="pan"
+            placeholder="PAN No."
+            value={formData.pan}
             onChange={handleChange}
             required
           />
