@@ -1,9 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Details from './Components/AddtionalDetails'
+import HomeLengo from './Components/HomeLengo'
+import Team from './Components/Team'
 function App() {
   return (
-    <Details/>
+    <div>
+    <HomeLengo/>
+    <Team/>
+    </div>
   );
 }
 export default App;
